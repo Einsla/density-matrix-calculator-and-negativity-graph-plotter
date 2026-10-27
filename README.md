@@ -18,7 +18,7 @@ A Python/Streamlit application for exploring two-qubit density matrices in a qua
 - Wolfram Mathematica, with a local Wolfram Kernel installation.
 - Python packages listed in [requirements.txt](requirements.txt).
 
-The Mathematica kernel path is currently configured in `computational programme/mathematica_coding.py`. If your installation uses another location, update `kernel_path` in that file before running the app.
+The Mathematica kernel path is currently configured in `src/mathematica_coding.py`. If your installation uses another location, update `kernel_path` in that file before running the app.
 
 ## Setup (Windows)
 
@@ -44,8 +44,7 @@ The Mathematica kernel path is currently configured in `computational programme/
 6. Start the Streamlit interface from the code directory:
 
    ```powershell
-   cd "computational programme"
-   streamlit run interface.py
+   streamlit run src/interface.py
    ```
 
 7. Streamlit should print a local URL (usually `http://localhost:8501`). Open it in your browser.
@@ -78,7 +77,7 @@ The two plot modes follow different update procedures in the current implementat
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── computational programme/
+├── src/
 │   ├── interface.py                 # Streamlit user interface
 │   ├── density_calculation.py       # Density-matrix and perturbative calculations
 │   ├── negativity_plotter.py        # Partial transpose, negativity, plots and output
@@ -103,7 +102,7 @@ The application creates `data/` and `result/` at runtime. Keep generated data if
 
 - **Wolfram Kernel fails to start:** verify Mathematica is installed and update `kernel_path` in `mathematica_coding.py`.
 - **Missing Python module:** activate the intended virtual environment and run `pip install -r requirements.txt`.
-- **Streamlit command not found:** install dependencies in the active environment, then run `python -m streamlit run interface.py` from `computational programme/`.
+- **Streamlit command not found:** install dependencies in the active environment, then run `python -m streamlit run interface.py` from `src/`.
 - **Plotting/interpolation errors:** check that the requested number of nodes is sufficient for the interpolation method and inspect the numerical results.
 
 ## License

@@ -80,6 +80,7 @@ The two plot modes follow different update procedures in the current implementat
 
 ```text
 .
+├── .github/workflows/python-checks.yml  # Automated Python syntax check
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -93,7 +94,7 @@ The two plot modes follow different update procedures in the current implementat
 └── result/                          # Generated plot/data output (created at runtime)
 ```
 
-The application creates `data/` and `result/` at runtime. Keep generated data if you want to reuse cached integrals or retain previous outputs.
+A GitHub Actions workflow compiles the Python source files to catch syntax errors; it does not execute the application or validate the physics. The application creates `data/` and `result/` at runtime. Keep generated data if you want to reuse cached integrals or retain previous outputs.
 
 ## Important notes
 

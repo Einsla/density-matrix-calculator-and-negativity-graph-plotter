@@ -2,7 +2,7 @@ from wolframclient.evaluation import WolframLanguageSession
 from wolframclient.language import wlexpr
 from sympy.printing.mathematica import mathematica_code, MCodePrinter
 import sympy as sp
-import time
+import os
 
 # define mathematica file location
 kernel_path = r"C:\Program Files\Wolfram Research\Wolfram\14.3\WolframKernel.exe"

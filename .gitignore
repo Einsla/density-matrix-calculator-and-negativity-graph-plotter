@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+
+# IDE/editor settings
+.idea/
+.vscode/
+
+# Generated runtime data and plots
+data/
+result/
+
+# OS files
+.DS_Store
+Thumbs.db

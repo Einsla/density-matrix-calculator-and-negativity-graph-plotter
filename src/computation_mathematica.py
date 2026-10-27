@@ -134,6 +134,7 @@ def createIJ(Precision):
     # save data in pkl format
     subfolder = f'{Precision}'
     file_path = data_folder / subfolder / f'data{{R = {Rc:.2f}, Δt = {time_step:.2f}}}.pkl'
+    file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, 'wb') as file:
         pickle.dump(data, file)
     t2 = t.time()

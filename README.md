@@ -59,7 +59,7 @@ You can also create a Windows `.bat` launcher containing:
 
 ```bat
 @echo off
-cd /d "C:\path\to\density-matrix-calculator-and-negativity-graph-plotter\computational programme"
+cd /d "C:\path\to\density-matrix-calculator-and-negativity-graph-plotter\src"
 streamlit run interface.py
 pause
 ```

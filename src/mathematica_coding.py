@@ -5,7 +5,7 @@ import sympy as sp
 import os
 
 # define mathematica file location
-kernel_path = r"C:\Program Files\Wolfram Research\Wolfram\14.3\WolframKernel.exe"
+kernel_path = os.environ.get("WOLFRAM_KERNEL_PATH", r"C:\Program Files\Wolfram Research\Wolfram\14.3\WolframKernel.exe")
 session = WolframLanguageSession(kernel_path)
 
 # adding piecewise function to python mathematica translator

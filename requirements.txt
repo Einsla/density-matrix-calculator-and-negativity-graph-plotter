@@ -1,0 +1,8 @@
+streamlit
+sympy
+wolframclient
+numpy
+matplotlib
+pandas
+scipy
+pypandoc

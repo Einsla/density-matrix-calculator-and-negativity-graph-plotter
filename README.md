@@ -18,7 +18,13 @@ A Python/Streamlit application for exploring two-qubit density matrices in a qua
 - Wolfram Mathematica, with a local Wolfram Kernel installation.
 - Python packages listed in [requirements.txt](requirements.txt).
 
-The Mathematica kernel path is currently configured in `src/mathematica_coding.py`. If your installation uses another location, update `kernel_path` in that file before running the app.
+The Mathematica kernel path has a Windows default in `src/mathematica_coding.py`. You can override it without editing the source by setting `WOLFRAM_KERNEL_PATH` to your Wolfram Kernel executable path in the terminal before starting Streamlit. For example, in PowerShell:
+
+```powershell
+$env:WOLFRAM_KERNEL_PATH = "C:\Program Files\Wolfram Research\Wolfram\14.3\WolframKernel.exe"
+```
+
+Change the example path/version to match your installation.
 
 ## Setup (Windows)
 
@@ -100,9 +106,9 @@ The application creates `data/` and `result/` at runtime. Keep generated data if
 
 ## Troubleshooting
 
-- **Wolfram Kernel fails to start:** verify Mathematica is installed and update `kernel_path` in `mathematica_coding.py`.
+- **Wolfram Kernel fails to start:** verify Mathematica is installed and set `WOLFRAM_KERNEL_PATH` to the correct executable path, or update the default in `src/mathematica_coding.py`.
 - **Missing Python module:** activate the intended virtual environment and run `pip install -r requirements.txt`.
-- **Streamlit command not found:** install dependencies in the active environment, then run `python -m streamlit run interface.py` from `src/`.
+- **Streamlit command not found:** install dependencies in the active environment, then run `python -m streamlit run src/interface.py` from the repository root.
 - **Plotting/interpolation errors:** check that the requested number of nodes is sufficient for the interpolation method and inspect the numerical results.
 
 ## License
